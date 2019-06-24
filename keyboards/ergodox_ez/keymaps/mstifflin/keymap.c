@@ -119,28 +119,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_TRNS        ,
     KC_TRNS        , RGB_HUD        , RGB_HUI
   ),
-
-  [LAYER_SYMBOL] = LAYOUT_ergodox(
-    // Left hand
-    KC_TRNS                  , KC_TRNS                  , KC_TRNS                  , KC_TRNS                  , KC_TRNS                  , KC_TRNS                  , KC_TRNS,
-    KC_TRNS                  , KC_TRNS                  , KC_TRNS                  , KC_TRNS                  , KC_TRNS                  , MT(MOD_HYPR, KC_KP_PLUS) , KC_TRNS,
-    KC_TRNS                  , KC_TRNS                  , KC_TRNS                  , KC_TRNS                  , KC_TRNS                  , MT(MOD_HYPR, KC_KP_MINUS),
-    KC_TRNS                  , KC_TRNS                  , KC_TRNS                  , KC_TRNS                  , KC_TRNS                  , KC_TRNS                  , KC_TRNS,
-    KC_TRNS                  , KC_TRNS                  , KC_TRNS                  , KC_TRNS                  , KC_TRNS                  ,
-    KC_TRNS                  , KC_TRNS                  ,
-    KC_TRNS                  ,
-    KC_TRNS                  , KC_TRNS                  , KC_TRNS                  ,
-
-    // Right hand
-    KC_TRNS                  , KC_TRNS                  , KC_TRNS                  , KC_TRNS                  , KC_TRNS                  , KC_TRNS                  , KC_TRNS,
-    KC_TRNS                  , KC_LABK                  , KC_AT                    , KC_LPRN                  , KC_RPRN                  , KC_HASH                  , KC_TRNS,
-    KC_RABK                  , KC_EQUAL                 , KC_LCBR                  , KC_RCBR                  , KC_DLR                   , KC_TRNS                  ,
-    KC_TRNS                  , KC_TILD                  , KC_GRAVE                 , KC_LBRACKET              , KC_RBRACKET              , KC_PIPE                  , KC_TRNS,
-    KC_KP_PLUS               , KC_KP_MINUS              , KC_KP_ASTERISK           , KC_KP_SLASH              , KC_TRNS                  ,
-    KC_TRNS                  , KC_TRNS                  ,
-    KC_TRNS                  ,
-    KC_TRNS                  , KC_TRNS                  , KC_TRNS
-  ),
 };
 
 rgblight_config_t rgblight_config;
