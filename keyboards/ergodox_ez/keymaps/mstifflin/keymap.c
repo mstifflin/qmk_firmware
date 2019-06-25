@@ -111,8 +111,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     // Right hand
     _______        , _______        , _______        , _______        , _______        , _______        , _______        ,
-    _______        , _______        , KC_HOME        , KC_UP          , KC_END         , _______        , _______        ,
-    _______        , KC_LEFT        , KC_DOWN        , KC_RIGHT       , _______        , _______        ,
+    _______        , _______        , KC_HOME        , _______        , KC_END         , _______        , _______        ,
+                     KC_LEFT        , KC_DOWN        , KC_UP          , KC_RIGHT       , _______        , _______        ,
     _______        , _______        , KC_PGUP        , _______        , KC_PGDOWN      , _______        , _______        ,
     _______        , _______        , _______        , _______        , _______        ,
     RGB_TOG        , _______        ,
