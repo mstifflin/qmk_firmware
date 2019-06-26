@@ -60,7 +60,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_TAB        , KC_Q          , KC_W          , KC_E          , KC_R          , KC_T          , _______       ,
     KC_ESC        , KC_A          , KC_S          , KC_D          , KC_F          , KC_G          ,
     KC_LSHIFT     , KC_Z          , KC_X          , KC_C          , KC_V          , KC_B          , _______       ,
-    _______       , KC_LCTRL      , KC_LALT       , KC_LGUI       , MO(1)         ,
+    _______       , _______       , KC_LCTRL      , KC_LALT       , KC_LGUI       ,
     _______       , _______       ,
     _______       ,
     KC_BSPACE     , _______       , _______       ,
@@ -70,10 +70,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_LBRACKET   , KC_Y          , KC_U          , KC_I          , KC_O          , KC_P          , KC_BSLASH     ,
                     KC_H          , KC_J          , KC_K          , KC_L          , KC_SCOLON     , KC_QUOTE      ,
     KC_RBRACKET   , KC_N          , KC_M          , KC_COMMA      , KC_DOT        , KC_SLASH      , KC_LSHIFT     ,
-    KC_SPACE      , MO(2)         , KC_HYPR       , _______       , KC_LCTRL      ,
+    MO(2)         , _______       , _______       , _______       , KC_LCTRL      ,
     KC_KP_MINUS   , KC_KP_ASTERISK,
     KC_KP_PLUS    ,
-    KC_EQUAL      , _______       , KC_ENTER
+    KC_EQUAL      , KC_ENTER      ,KC_SPACE
   ),
 
   [LAYER_MOUSE_CTRL] = LAYOUT_ergodox(
@@ -112,7 +112,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // Right hand
     _______        , _______        , _______        , _______        , _______        , _______        , _______        ,
     _______        , _______        , KC_HOME        , _______        , KC_END         , _______        , _______        ,
-                     KC_LEFT        , KC_DOWN        , KC_UP          , KC_RIGHT       , _______        , _______        ,
+                     KC_LEFT        , KC_DOWN        , KC_UP          , KC_RIGHT       , _______        , KC_ENTER       ,
     _______        , _______        , KC_PGUP        , _______        , KC_PGDOWN      , _______        , _______        ,
     _______        , _______        , _______        , _______        , _______        ,
     RGB_TOG        , _______        ,
