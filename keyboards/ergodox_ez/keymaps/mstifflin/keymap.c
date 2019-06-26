@@ -24,11 +24,12 @@ enum custom_keycodes {
   RGB_SLD = SAFE_RANGE, // can always be here
   TOGGLE_LAYER_COLOR,
   EPRM,
-  HSV_172_255_255,
-  HSV_86_255_128,
-  HSV_27_255_255,
-  HSV_215_255_128,
-  HSV_0_255_255,
+  TEAL_LIGHTS,
+  BLUE_LIGHTS,
+  GREEN_LIGHTS,
+  ORANGE_LIGHTS,
+  PURPLE_LIGHTS,
+  RED_LIGHTS,
 };
 
 /* Keymap
@@ -100,7 +101,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [LAYER_LIGHT_CTRL] = LAYOUT_ergodox(
     // Left hand
-    _______        , _______        , HSV_172_255_255, HSV_86_255_128 , HSV_27_255_255 , HSV_215_255_128, HSV_0_255_255  ,
+    _______        , TEAL_LIGHTS    , BLUE_LIGHTS    , GREEN_LIGHTS   , ORANGE_LIGHTS  , PURPLE_LIGHTS  , RED_LIGHTS     ,
     _______        , _______        , _______        , _______        , _______        , _______        , _______        ,
     _______        , _______        , _______        , _______        , _______        , _______        ,
     _______        , _______        , _______        , _______        , _______        , _______        , _______        ,
@@ -122,7 +123,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 };
 
 rgblight_config_t rgblight_config;
-bool disable_layer_color = 0;
+bool disable_layer_color = 1;
 
 bool suspended = false;
 
@@ -143,7 +144,16 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         disable_layer_color ^= 1;
       }
       return false;
-    case HSV_172_255_255:
+    case TEAL_LIGHTS:
+      if (record->event.pressed) {
+        #ifdef RGBLIGHT_ENABLE
+          rgblight_enable();
+          rgblight_mode(1);
+          rgblight_sethsv(130,237,217);
+        #endif
+      }
+      return false;
+    case BLUE_LIGHTS:
       if (record->event.pressed) {
         #ifdef RGBLIGHT_ENABLE
           rgblight_enable();
@@ -152,7 +162,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         #endif
       }
       return false;
-    case HSV_86_255_128:
+    case GREEN_LIGHTS:
       if (record->event.pressed) {
         #ifdef RGBLIGHT_ENABLE
           rgblight_enable();
@@ -161,7 +171,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         #endif
       }
       return false;
-    case HSV_27_255_255:
+    case ORANGE_LIGHTS:
       if (record->event.pressed) {
         #ifdef RGBLIGHT_ENABLE
           rgblight_enable();
@@ -170,7 +180,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         #endif
       }
       return false;
-    case HSV_215_255_128:
+    case PURPLE_LIGHTS:
       if (record->event.pressed) {
         #ifdef RGBLIGHT_ENABLE
           rgblight_enable();
@@ -179,7 +189,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         #endif
       }
       return false;
-    case HSV_0_255_255:
+    case RED_LIGHTS:
       if (record->event.pressed) {
         #ifdef RGBLIGHT_ENABLE
           rgblight_enable();
