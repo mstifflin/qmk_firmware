@@ -60,8 +60,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_TAB        , KC_Q          , KC_W          , KC_E          , KC_R          , KC_T          , _______       ,
     KC_ESC        , KC_A          , KC_S          , KC_D          , KC_F          , KC_G          ,
     KC_LSHIFT     , KC_Z          , KC_X          , KC_C          , KC_V          , KC_B          , _______       ,
-    _______       , _______       , _______       , TG(2)         , MO(2)         ,
-    _______       , KC_LCTRL      ,
+    _______       , KC_LCTRL      , KC_LALT       , KC_LGUI       , MO(2)         ,
+    _______       , _______      ,
     KC_LALT       ,
     KC_LGUI       , KC_BSPACE     , KC_LGUI       ,
 
@@ -70,7 +70,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_LBRACKET   , KC_Y          , KC_U          , KC_I          , KC_O          , KC_P          , KC_BSLASH     ,
                     KC_H          , KC_J          , KC_K          , KC_L          , KC_SCOLON     , KC_QUOTE      ,
     KC_RBRACKET   , KC_N          , KC_M          , KC_COMMA      , KC_DOT        , KC_SLASH      , KC_LSHIFT     ,
-    MO(1)         , TG(1)         , _______       , _______       , KC_HYPR       ,
+    MO(1)         , _______       , KC_HYPR       , _______       , KC_LCTRL      ,
     KC_KP_MINUS   , KC_KP_ASTERISK,
     KC_KP_PLUS    ,
     KC_EQUAL      , KC_ENTER      , KC_SPACE
