@@ -58,23 +58,25 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [LAYER_BASE] = LAYOUT_ergodox(
     // Left hand
     KC_GRV        , KC_1          , KC_2          , KC_3          , KC_4          , KC_5          , _______       ,
-    KC_TAB        , KC_Q          , KC_W          , KC_E          , KC_R          , KC_T          , _______       ,
+    KC_TAB        , KC_Q          , KC_W          , KC_E          , KC_R          , KC_T          , KC_MINUS      ,
     KC_ESC        , KC_A          , KC_S          , KC_D          , KC_F          , KC_G          ,
-    KC_LSHIFT     , KC_Z          , KC_X          , KC_C          , KC_V          , KC_B          , _______       ,
-    _______       , _______       , KC_LCTRL      , KC_LALT       , KC_LGUI       ,
-    _______       , _______       ,
-    _______       ,
-    KC_BSPACE     , _______       , _______       ,
+    KC_LSHIFT     , KC_Z          , KC_X          , KC_C          , KC_V          , KC_B          , KC_LBRACKET   ,
+    KC_LCTRL      , KC_LALT       , KC_LCTRL      , KC_LALT       , KC_LGUI       ,
+
+                                                                                    _______       , KC_AUDIO_MUTE ,
+                                                                                                    KC_AUDIO_VOL_UP,
+                                                                    KC_LGUI       , KC_SPACE      , KC_AUDIO_VOL_DOWN,
 
     // Right hand
-    KC_PGUP       , KC_6          , KC_7          , KC_8          , KC_9          , KC_0          , KC_MINUS      ,
-    KC_LBRACKET   , KC_Y          , KC_U          , KC_I          , KC_O          , KC_P          , KC_BSLASH     ,
+    _______       , KC_6          , KC_7          , KC_8          , KC_9          , KC_0          , KC_BSPACE     ,
+    KC_EQUAL      , KC_Y          , KC_U          , KC_I          , KC_O          , KC_P          , KC_BSLASH     ,
                     KC_H          , KC_J          , KC_K          , KC_L          , KC_SCOLON     , KC_QUOTE      ,
     KC_RBRACKET   , KC_N          , KC_M          , KC_COMMA      , KC_DOT        , KC_SLASH      , KC_LSHIFT     ,
     MO(2)         , _______       , _______       , _______       , KC_LCTRL      ,
-    KC_KP_MINUS   , KC_KP_ASTERISK,
-    KC_KP_PLUS    ,
-    KC_EQUAL      , KC_ENTER      ,KC_SPACE
+
+    _______       , KC_KP_ASTERISK,
+    _______       ,
+    _______       , _______       , KC_SPACE
   ),
 
   [LAYER_MOUSE_CTRL] = LAYOUT_ergodox(
@@ -106,16 +108,18 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______        , _______        , _______        , _______        , _______        , _______        ,
     _______        , _______        , _______        , _______        , _______        , _______        , _______        ,
     _______        , _______        , _______        , _______        , _______        ,
-    RGB_MOD        , RGB_SLD        ,
-    _______        ,
+
+                     RGB_MOD        , RGB_SLD        ,
+                                      _______        ,
     RGB_VAD        , RGB_VAI        , _______        ,
 
     // Right hand
     _______        , _______        , _______        , _______        , _______        , _______        , _______        ,
-    _______        , _______        , KC_HOME        , _______        , KC_END         , _______        , _______        ,
+    _______        , _______        , KC_END         , KC_HOME        , _______        , _______        , _______        ,
                      KC_LEFT        , KC_DOWN        , KC_UP          , KC_RIGHT       , _______        , KC_ENTER       ,
-    _______        , _______        , KC_PGUP        , _______        , KC_PGDOWN      , _______        , _______        ,
+    _______        , _______        , KC_PGDOWN      , KC_PGUP        , _______        , _______        , _______        ,
     _______        , _______        , _______        , _______        , _______        ,
+
     RGB_TOG        , _______        ,
     _______        ,
     _______        , RGB_HUD        , RGB_HUI
