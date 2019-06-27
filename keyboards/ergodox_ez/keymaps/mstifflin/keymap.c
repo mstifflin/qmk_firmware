@@ -75,8 +75,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     MO(LAYER_MISC_CTRL), _______       , _______       , _______       , KC_LCTRL      ,
 
     _______       , KC_KP_ASTERISK,
-    _______       ,
-    _______       , _______       , LT(LAYER_MISC_CTRL, KC_SPACE)
+    KC_MS_WH_UP   ,
+    KC_MS_WH_DOWN , _______       , LT(LAYER_MISC_CTRL, KC_SPACE)
   ),
 
   [LAYER_MOUSE_CTRL] = LAYOUT_ergodox(
