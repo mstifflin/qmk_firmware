@@ -104,14 +104,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [LAYER_MISC_CTRL] = LAYOUT_ergodox(
     // Left hand
     _______        , TEAL_LIGHTS    , BLUE_LIGHTS    , GREEN_LIGHTS   , ORANGE_LIGHTS  , PURPLE_LIGHTS  , RED_LIGHTS     ,
-    _______        , _______        , _______        , _______        , _______        , _______        , _______        ,
+    _______        , RGB_MOD        , RGB_SLD        , RGB_VAD        , RGB_VAI        , _______        , _______        ,
     _______        , _______        , _______        , _______        , _______        , _______        ,
     _______        , _______        , _______        , _______        , _______        , _______        , _______        ,
     _______        , _______        , _______        , _______        , _______        ,
 
-                     RGB_MOD        , RGB_SLD        ,
+                     _______        , _______        ,
                                       _______        ,
-    RGB_VAD        , RGB_VAI        , _______        ,
+    _______        , _______        , _______        ,
 
     // Right hand
     _______        , _______        , _______        , _______        , _______        , _______        , _______        ,
