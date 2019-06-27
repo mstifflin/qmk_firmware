@@ -17,7 +17,7 @@
 
 #define LAYER_BASE 0
 #define LAYER_MOUSE_CTRL 1
-#define LAYER_LIGHT_CTRL 2
+#define LAYER_MISC_CTRL 2
 #define LAYER_SYMBOL 3
 
 enum custom_keycodes {
@@ -68,15 +68,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                                     KC_LGUI       , KC_SPACE      , KC_AUDIO_VOL_DOWN,
 
     // Right hand
-    _______       , KC_6          , KC_7          , KC_8          , KC_9          , KC_0          , KC_BSPACE     ,
-    KC_EQUAL      , KC_Y          , KC_U          , KC_I          , KC_O          , KC_P          , KC_BSLASH     ,
-                    KC_H          , KC_J          , KC_K          , KC_L          , KC_SCOLON     , KC_QUOTE      ,
-    KC_RBRACKET   , KC_N          , KC_M          , KC_COMMA      , KC_DOT        , KC_SLASH      , KC_LSHIFT     ,
-    MO(2)         , _______       , _______       , _______       , KC_LCTRL      ,
+    _______            , KC_6          , KC_7          , KC_8          , KC_9          , KC_0          , KC_BSPACE     ,
+    KC_EQUAL           , KC_Y          , KC_U          , KC_I          , KC_O          , KC_P          , KC_BSLASH     ,
+                         KC_H          , KC_J          , KC_K          , KC_L          , KC_SCOLON     , KC_QUOTE      ,
+    KC_RBRACKET        , KC_N          , KC_M          , KC_COMMA      , KC_DOT        , KC_SLASH      , KC_LSHIFT     ,
+    MO(LAYER_MISC_CTRL), _______       , _______       , _______       , KC_LCTRL      ,
 
     _______       , KC_KP_ASTERISK,
     _______       ,
-    _______       , _______       , KC_SPACE
+    _______       , _______       , LT(LAYER_MISC_CTRL, KC_SPACE)
   ),
 
   [LAYER_MOUSE_CTRL] = LAYOUT_ergodox(
@@ -101,7 +101,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______            , _______            , _______
   ),
 
-  [LAYER_LIGHT_CTRL] = LAYOUT_ergodox(
+  [LAYER_MISC_CTRL] = LAYOUT_ergodox(
     // Left hand
     _______        , TEAL_LIGHTS    , BLUE_LIGHTS    , GREEN_LIGHTS   , ORANGE_LIGHTS  , PURPLE_LIGHTS  , RED_LIGHTS     ,
     _______        , _______        , _______        , _______        , _______        , _______        , _______        ,
