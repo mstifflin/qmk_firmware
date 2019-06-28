@@ -57,15 +57,15 @@ enum custom_keycodes {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [LAYER_BASE] = LAYOUT_ergodox(
     // Left hand
-    KC_GRV        , KC_1          , KC_2          , KC_3          , KC_4          , KC_5          , _______       ,
-    KC_TAB        , KC_Q          , KC_W          , KC_E          , KC_R          , KC_T          , _______       ,
-    KC_ESC        , KC_A          , KC_S          , KC_D          , KC_F          , KC_G          ,
-    KC_LSHIFT     , KC_Z          , KC_X          , KC_C          , KC_V          , KC_B          , _______       ,
-    KC_LCTRL      , KC_LALT       , _______       , KC_MINUS      , KC_EQUAL      ,
+    KC_GRV        , KC_1       , KC_2          , KC_3          , KC_4          , KC_5          , _______       ,
+    KC_TAB        , KC_Q       , KC_W          , KC_E          , KC_R          , KC_T          , _______       ,
+    KC_ESC        , KC_A       , KC_S          , KC_D          , KC_F          , KC_G          ,
+    KC_LSHIFT     , CTL_T(KC_Z), KC_X          , KC_C          , KC_V          , KC_B          , _______       ,
+    KC_LCTRL      , KC_LALT    , _______       , _______       , KC_LALT       ,
 
-                                                                                    _______       , KC_AUDIO_MUTE ,
-                                                                                                    KC_AUDIO_VOL_UP,
-                                                                    KC_LGUI       , KC_SPACE      , KC_AUDIO_VOL_DOWN,
+                                                                                       KC_SPACE , KC_AUDIO_MUTE    ,
+                                                                                                  KC_AUDIO_VOL_UP  ,
+                                                                    KC_LGUI, MO(LAYER_MISC_CTRL), KC_AUDIO_VOL_DOWN,
 
     // Right hand
     _______            , KC_6          , KC_7          , KC_8          , KC_9          , KC_0          , KC_BSPACE     ,
@@ -114,8 +114,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______        , _______        , _______        ,
 
     // Right hand
-    _______        , _______        , _______        , _______        , _______        , _______        , _______        ,
-    _______        , KC_HOME        , KC_PGUP        , _______        , KC_END         , _______        , _______        ,
+    _______        , _______        , _______        , _______        , _______        , KC_MINUS       , KC_EQUAL       ,
+    _______        , KC_HOME        , KC_PGUP        , _______        , KC_END         , KC_LBRACKET    , KC_RBRACKET    ,
                      KC_LEFT        , KC_DOWN        , KC_UP          , KC_RIGHT       , _______        , KC_ENTER       ,
     _______        , _______        , KC_PGDOWN      , _______        , _______        , _______        , _______        ,
     _______        , _______        , _______        , _______        , _______        ,
