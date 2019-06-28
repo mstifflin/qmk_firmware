@@ -58,10 +58,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [LAYER_BASE] = LAYOUT_ergodox(
     // Left hand
     KC_GRV        , KC_1          , KC_2          , KC_3          , KC_4          , KC_5          , _______       ,
-    KC_TAB        , KC_Q          , KC_W          , KC_E          , KC_R          , KC_T          , KC_MINUS      ,
+    KC_TAB        , KC_Q          , KC_W          , KC_E          , KC_R          , KC_T          , _______       ,
     KC_ESC        , KC_A          , KC_S          , KC_D          , KC_F          , KC_G          ,
-    KC_LSHIFT     , KC_Z          , KC_X          , KC_C          , KC_V          , KC_B          , KC_LBRACKET   ,
-    KC_LCTRL      , KC_LALT       , KC_LCTRL      , KC_LALT       , KC_LGUI       ,
+    KC_LSHIFT     , KC_Z          , KC_X          , KC_C          , KC_V          , KC_B          , _______       ,
+    KC_LCTRL      , KC_LALT       , _______       , KC_MINUS      , KC_EQUAL      ,
 
                                                                                     _______       , KC_AUDIO_MUTE ,
                                                                                                     KC_AUDIO_VOL_UP,
@@ -69,14 +69,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     // Right hand
     _______            , KC_6          , KC_7          , KC_8          , KC_9          , KC_0          , KC_BSPACE     ,
-    KC_EQUAL           , KC_Y          , KC_U          , KC_I          , KC_O          , KC_P          , KC_BSLASH     ,
+    _______            , KC_Y          , KC_U          , KC_I          , KC_O          , KC_P          , KC_BSLASH     ,
                          KC_H          , KC_J          , KC_K          , KC_L          , KC_SCOLON     , KC_QUOTE      ,
-    KC_RBRACKET        , KC_N          , KC_M          , KC_COMMA      , KC_DOT        , KC_SLASH      , KC_LSHIFT     ,
-    MO(LAYER_MISC_CTRL), _______       , _______       , _______       , KC_LCTRL      ,
+    _______            , KC_N          , KC_M          , KC_COMMA      , KC_DOT        , KC_SLASH      , KC_LSHIFT     ,
+    KC_LBRACKET        , KC_RBRACKET   , _______       , _______       , KC_LCTRL      ,
 
-    _______       , KC_KP_ASTERISK,
+    _______       , _______,
     KC_MS_WH_UP   ,
-    KC_MS_WH_DOWN , _______       , LT(LAYER_MISC_CTRL, KC_SPACE)
+    KC_MS_WH_DOWN , _______, LT(LAYER_MISC_CTRL, KC_SPACE)
   ),
 
   [LAYER_MOUSE_CTRL] = LAYOUT_ergodox(
@@ -91,10 +91,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_MS_BTN1         , KC_MS_BTN2         , _______            ,
 
     // Right hand
-    _______            , KC_F6              , KC_F7              , KC_F8              , KC_F9              , KC_F10             , KC_MEDIA_PLAY_PAUSE,
-    _______            , _______            , _______            , KC_MS_WH_UP        , KC_MEDIA_PREV_TRACK, KC_MEDIA_NEXT_TRACK, KC_AUDIO_VOL_UP    ,
-                         _______            , KC_MS_WH_LEFT      , KC_MS_WH_DOWN      , KC_MS_WH_RIGHT     , _______            , KC_AUDIO_VOL_DOWN  ,
-    _______            , _______            , KC_MS_ACCEL0       , KC_MS_ACCEL1       , KC_MS_ACCEL2       , _______            , KC_AUDIO_MUTE      ,
+    _______            , KC_F6              , KC_F7              , KC_F8              , KC_F9              , KC_F10             , _______,
+    _______            , _______            , _______            , KC_MS_WH_UP        , KC_MEDIA_PREV_TRACK, KC_MEDIA_NEXT_TRACK, _______,
+                         _______            , KC_MS_WH_LEFT      , KC_MS_WH_DOWN      , KC_MS_WH_RIGHT     , _______            , _______,
+    _______            , _______            , KC_MS_ACCEL0       , KC_MS_ACCEL1       , KC_MS_ACCEL2       , _______            , _______,
     _______            , _______            , _______            , _______            , _______            ,
     _______            , _______            ,
     _______            ,
@@ -105,7 +105,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // Left hand
     _______        , TEAL_LIGHTS    , BLUE_LIGHTS    , GREEN_LIGHTS   , ORANGE_LIGHTS  , PURPLE_LIGHTS  , RED_LIGHTS     ,
     _______        , RGB_MOD        , RGB_SLD        , RGB_VAD        , RGB_VAI        , _______        , _______        ,
-    _______        , _______        , _______        , _______        , _______        , _______        ,
+    _______        , RGB_TOG        , RGB_HUD        , RGB_HUI        , _______        , _______        ,
     _______        , _______        , _______        , _______        , _______        , _______        , _______        ,
     _______        , _______        , _______        , _______        , _______        ,
 
@@ -115,14 +115,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     // Right hand
     _______        , _______        , _______        , _______        , _______        , _______        , _______        ,
-    _______        , _______        , KC_END         , KC_HOME        , _______        , _______        , _______        ,
+    _______        , KC_HOME        , KC_PGUP        , _______        , KC_END         , _______        , _______        ,
                      KC_LEFT        , KC_DOWN        , KC_UP          , KC_RIGHT       , _______        , KC_ENTER       ,
-    _______        , _______        , KC_PGDOWN      , KC_PGUP        , _______        , _______        , _______        ,
+    _______        , _______        , KC_PGDOWN      , _______        , _______        , _______        , _______        ,
     _______        , _______        , _______        , _______        , _______        ,
 
-    RGB_TOG        , _______        ,
+    _______        , _______        ,
     _______        ,
-    _______        , RGB_HUD        , RGB_HUI
+    _______        , _______        , _______
   ),
 };
 
