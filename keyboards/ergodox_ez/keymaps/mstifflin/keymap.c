@@ -18,7 +18,7 @@
 #define LAYER_BASE 0
 #define LAYER_MOUSE_CTRL 1
 #define LAYER_MISC_CTRL 2
-#define LAYER_SYMBOL 3
+#define LAYER_NUM_PAD 3
 
 enum custom_keycodes {
   RGB_SLD = SAFE_RANGE, // can always be here
@@ -57,7 +57,7 @@ enum custom_keycodes {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [LAYER_BASE] = LAYOUT_ergodox(
     // Left hand
-    KC_GRV        , KC_1       , KC_2          , KC_3          , KC_4          , KC_5          , _______       ,
+    KC_GRV        , KC_1       , KC_2          , KC_3          , KC_4          , KC_5          , TG(LAYER_MOUSE_CTRL),
     KC_TAB        , KC_Q       , KC_W          , KC_E          , KC_R          , KC_T          , _______       ,
     KC_ESC        , KC_A       , KC_S          , KC_D          , KC_F          , KC_G          ,
     KC_LSHIFT     , CTL_T(KC_Z), KC_X          , KC_C          , KC_V          , KC_B          , _______       ,
@@ -68,7 +68,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                                     KC_LGUI, MO(LAYER_MISC_CTRL), KC_AUDIO_VOL_DOWN,
 
     // Right hand
-    _______            , KC_6          , KC_7          , KC_8          , KC_9          , KC_0          , KC_BSPACE     ,
+    TG(LAYER_NUM_PAD)  , KC_6          , KC_7          , KC_8          , KC_9          , KC_0          , KC_BSPACE     ,
     _______            , KC_Y          , KC_U          , KC_I          , KC_O          , KC_P          , KC_BSLASH     ,
                          KC_H          , KC_J          , KC_K          , KC_L          , KC_SCOLON     , KC_QUOTE      ,
     _______            , KC_N          , KC_M          , KC_COMMA      , KC_DOT        , KC_SLASH      , KC_LSHIFT     ,
@@ -91,10 +91,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_MS_BTN1         , KC_MS_BTN2         , _______            ,
 
     // Right hand
-    _______            , KC_F6              , KC_F7              , KC_F8              , KC_F9              , KC_F10             , _______,
-    _______            , _______            , _______            , KC_MS_WH_UP        , KC_MEDIA_PREV_TRACK, KC_MEDIA_NEXT_TRACK, _______,
-                         _______            , KC_MS_WH_LEFT      , KC_MS_WH_DOWN      , KC_MS_WH_RIGHT     , _______            , _______,
-    _______            , _______            , KC_MS_ACCEL0       , KC_MS_ACCEL1       , KC_MS_ACCEL2       , _______            , _______,
+    _______            , KC_F6              , KC_F7              , KC_F8              , KC_F9              , KC_F10      , _______,
+    _______            , _______            , _______            , KC_MS_WH_UP        , _______            , _______     , _______,
+                         _______            , KC_MS_WH_LEFT      , KC_MS_WH_DOWN      , KC_MS_WH_RIGHT     , _______     , _______,
+    _______            , _______            , KC_MS_ACCEL0       , KC_MS_ACCEL1       , KC_MS_ACCEL2       , _______     , _______,
     _______            , _______            , _______            , _______            , _______            ,
     _______            , _______            ,
     _______            ,
@@ -103,7 +103,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [LAYER_MISC_CTRL] = LAYOUT_ergodox(
     // Left hand
-    _______        , TEAL_LIGHTS    , BLUE_LIGHTS    , GREEN_LIGHTS   , ORANGE_LIGHTS  , PURPLE_LIGHTS  , RED_LIGHTS     ,
+    TEAL_LIGHTS    , BLUE_LIGHTS    , GREEN_LIGHTS   , ORANGE_LIGHTS  , PURPLE_LIGHTS  , RED_LIGHTS     , _______        ,
     _______        , RGB_MOD        , RGB_SLD        , RGB_VAD        , RGB_VAI        , _______        , _______        ,
     _______        , RGB_TOG        , RGB_HUD        , RGB_HUI        , _______        , _______        ,
     _______        , _______        , _______        , _______        , _______        , _______        , _______        ,
@@ -123,6 +123,28 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______        , _______        ,
     _______        ,
     _______        , _______        , _______
+  ),
+
+  [LAYER_NUM_PAD] = LAYOUT_ergodox(
+    // Left hand
+    _______, _______, _______, _______, _______, _______, _______,
+    _______, _______, _______, _______, _______, _______, _______,
+    _______, _______, _______, _______, _______, _______,
+    _______, _______, _______, _______, _______, _______, _______,
+    _______, _______, _______, _______, _______,
+    _______, _______,
+    _______,
+    _______, _______, _______,
+
+    // Right hand
+    _______, _______, _______, _______, _______, _______, _______,
+    _______, _______, KC_P7  , KC_P8  , KC_P9  , _______, _______,
+             _______, KC_P4  , KC_P5  , KC_P6  , _______, _______,
+    _______, _______, KC_P1  , KC_P2  , KC_P3  , _______, _______,
+    _______, _______, _______, _______, _______,
+    _______, _______,
+    _______,
+    _______, _______, KC_P0
   ),
 };
 
