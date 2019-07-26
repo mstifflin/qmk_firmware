@@ -1,10 +1,5 @@
 #include QMK_KEYBOARD_H
 #include "version.h"
-#include "keymap_german.h"
-#include "keymap_nordic.h"
-#include "keymap_french.h"
-#include "keymap_spanish.h"
-#include "keymap_hungarian.h"
 
 #define KC_MAC_UNDO LGUI(KC_Z)
 #define KC_MAC_CUT LGUI(KC_X)
@@ -57,7 +52,7 @@ enum custom_keycodes {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [LAYER_BASE] = LAYOUT_ergodox(
     // Left hand
-    KC_GRV        , KC_1       , KC_2          , KC_3          , KC_4          , KC_5          , TG(LAYER_MOUSE_CTRL),
+    KC_GRV        , KC_1       , KC_2          , KC_3          , KC_4          , KC_5          , _______       ,
     KC_TAB        , KC_Q       , KC_W          , KC_E          , KC_R          , KC_T          , _______       ,
     KC_ESC        , KC_A       , KC_S          , KC_D          , KC_F          , KC_G          ,
     KC_LSHIFT     , CTL_T(KC_Z), KC_X          , KC_C          , KC_V          , KC_B          , _______       ,
