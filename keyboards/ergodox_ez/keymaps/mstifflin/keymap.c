@@ -170,7 +170,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         #ifdef RGBLIGHT_ENABLE
           rgblight_enable();
           rgblight_mode(1);
-          rgblight_sethsv(130,237,217);
+          rgblight_sethsv(130,237,128);
         #endif
       }
       return false;
