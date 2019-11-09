@@ -54,13 +54,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // Left hand
     KC_GRV        , KC_1       , KC_2          , KC_3          , KC_4          , KC_5          , _______       ,
     KC_TAB        , KC_Q       , KC_W          , KC_E          , KC_R          , KC_T          , KC_LBRACKET   ,
-    KC_ESC        , KC_A       , KC_S          , KC_D          , KC_F          , KC_G          ,
+    CTL_T(KC_ESC) , KC_A       , KC_S          , KC_D          , KC_F          , KC_G          ,
     KC_LSHIFT     , CTL_T(KC_Z), KC_X          , KC_C          , KC_V          , KC_B          , KC_RBRACKET   ,
-    KC_LCTRL      , KC_LALT    , _______       , _______       , KC_LALT       ,
+    KC_LCTRL      , KC_LALT    , _______       , KC_LCTRL      , KC_LALT       ,
 
-                                                                                     KC_SPACE ,   KC_AUDIO_MUTE  ,
+                                                                             MO(LAYER_NUM_PAD),          KC_SPACE,
                                                                                                   KC_AUDIO_VOL_UP,
-                                                                    KC_LGUI, MO(LAYER_NUM_PAD), KC_AUDIO_VOL_DOWN,
+                                                                    KC_LGUI,          KC_LCTRL, KC_AUDIO_VOL_DOWN,
 
     // Right hand
     _______    , KC_6          , KC_7          , KC_8          , KC_9          , KC_0          , KC_BSPACE     ,
