@@ -108,15 +108,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______, _______, _______,
 
     // Right hand
-    _______        , _______        , _______        , _______        , _______        , KC_MINUS       , KC_EQUAL       ,
-    _______        , KC_HOME        , KC_PGUP        , _______        , KC_END         , KC_LBRACKET    , KC_RBRACKET    ,
-                     KC_LEFT        , KC_DOWN        , KC_UP          , KC_RIGHT       , _______        , KC_ENTER       ,
-    _______        , _______        , KC_PGDOWN      , _______        , _______        , _______        , _______        ,
-    _______        , _______        , _______        , _______        , _______        ,
+    _______, _______, _______  , _______ , _______ , _______, KC_EQUAL,
+    _______, KC_LBRC, KC_MINUS , KC_EQUAL, KC_RBRC , KC_PIPE, _______ ,
+             KC_LEFT, KC_DOWN  , KC_UP   , KC_RIGHT, _______, KC_ENTER,
+    _______, _______, KC_PGDOWN, _______ , _______ , _______, _______ ,
+    _______, _______, _______  , _______ , _______ ,
 
-    _______        , _______        ,
-    _______        ,
-    _______        , _______        , _______
+    _______, _______,
+    _______,
+    _______, _______, _______
   ),
 
   [LAYER_NUM_PAD] = LAYOUT_ergodox(
