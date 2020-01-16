@@ -69,7 +69,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_MINUS   , KC_N          , KC_M          , KC_COMMA      , KC_DOT        , KC_SLASH      , KC_LSHIFT     ,
     KC_LBRACKET, KC_RBRACKET   , _______       , _______       , KC_LCTRL      ,
 
-    _______       , _______,
+    _______       , KC_CAPSLOCK,
     KC_MS_WH_UP   ,
     KC_MS_WH_DOWN , MO(LAYER_MOUSE_CTRL), LT(LAYER_MISC_CTRL, KC_SPACE)
   ),
