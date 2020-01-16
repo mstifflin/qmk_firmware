@@ -69,9 +69,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_MINUS   , KC_N          , KC_M          , KC_COMMA      , KC_DOT        , KC_SLASH      , KC_LSHIFT     ,
     KC_LBRACKET, KC_RBRACKET   , _______       , _______       , KC_LCTRL      ,
 
-    _______       , KC_CAPSLOCK,
-    KC_MS_WH_UP   ,
-    KC_MS_WH_DOWN , MO(LAYER_MOUSE_CTRL), LT(LAYER_MISC_CTRL, KC_SPACE)
+    KC_MPRV, KC_CAPSLOCK,
+    KC_MNXT,
+    KC_MPLY, MO(LAYER_MOUSE_CTRL), LT(LAYER_MISC_CTRL, KC_SPACE)
   ),
 
   [LAYER_MOUSE_CTRL] = LAYOUT_ergodox(
@@ -108,11 +108,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______, _______, _______,
 
     // Right hand
-    _______, _______, _______  , _______ , _______ , _______, KC_EQUAL,
-    _______, KC_LBRC, KC_MINUS , KC_EQUAL, KC_RBRC , KC_PIPE, _______ ,
-             KC_LEFT, KC_DOWN  , KC_UP   , KC_RIGHT, _______, KC_ENTER,
-    _______, _______, KC_PGDOWN, _______ , _______ , _______, _______ ,
-    _______, _______, _______  , _______ , _______ ,
+    _______, _______, _______ , _______ , _______ , _______, _______,
+    _______, KC_LBRC, KC_MINUS, KC_EQUAL, KC_RBRC , KC_PIPE, _______ ,
+             KC_LEFT, KC_DOWN , KC_UP   , KC_RIGHT, _______, KC_ENTER,
+    _______, _______, _______ , _______ , _______ , _______, _______ ,
+    _______, _______, _______ , _______ , _______ ,
 
     _______, _______,
     _______,
