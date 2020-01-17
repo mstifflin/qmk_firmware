@@ -60,7 +60,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
                                                                              MO(LAYER_NUM_PAD),          KC_SPACE,
                                                                                                   KC_AUDIO_VOL_UP,
-                                                                    KC_LGUI,          KC_LCTRL, KC_AUDIO_VOL_DOWN,
+                                                                    KC_LGUI, MO(LAYER_MISC_CTRL), KC_AUDIO_VOL_DOWN,
 
     // Right hand
     _______    , KC_6          , KC_7          , KC_8          , KC_9          , KC_0          , KC_BSPACE     ,
