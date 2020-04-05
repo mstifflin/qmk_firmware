@@ -110,7 +110,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______, _______, _______,
 
     // Right hand
-    KC_F7,   KC_F8,   KC_F9,    KC_F10,   KC_F11,   KC_F12,  _______,
+    KC_F7,   KC_F8,   KC_F9,    KC_F10,   KC_F11,   KC_F12,  KC_DEL,
     _______, KC_LBRC, KC_MINUS, KC_EQUAL, KC_RBRC , KC_PIPE, _______ ,
              KC_LEFT, KC_DOWN , KC_UP   , KC_RIGHT, _______, KC_ENTER,
     _______, _______, _______ , _______ , _______ , _______, _______ ,
