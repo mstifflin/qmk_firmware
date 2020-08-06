@@ -72,8 +72,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     KC_MPRV, KC_CAPSLOCK,
     KC_MNXT,
-    KC_MPLY, MO(LAYER_MISC_CTRL), KC_SPACE
-  ),
+    KC_MPLY, MO(LAYER_MOUSE_CTRL), LT(LAYER_MISC_CTRL, KC_SPACE)
+   ),
 
   [LAYER_WINDOWS] = LAYOUT_ergodox(
     // Left hand
