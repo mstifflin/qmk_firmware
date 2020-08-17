@@ -18,7 +18,7 @@
 
 enum custom_keycodes {
   RGB_SLD = SAFE_RANGE, // can always be here
-  TOGGLE_LAYER_COLOR,
+  TOGGLE_LAYER_COLOR_TIFF,
   EPRM,
   TEAL_LIGHTS,
   BLUE_LIGHTS,
@@ -184,7 +184,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         rgblight_mode(1);
       }
       return false;
-    case TOGGLE_LAYER_COLOR:
+    case TOGGLE_LAYER_COLOR_TIFF:
       if (record->event.pressed) {
         disable_layer_color ^= 1;
       }
