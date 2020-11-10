@@ -1,5 +1,4 @@
-/* Tiffany Lin's Preonic Layout
- */
+/* Tiffany Lin's Preonic Layout */
 
 #include QMK_KEYBOARD_H
 #include "muse.h"
