@@ -26,6 +26,7 @@ enum custom_keycodes {
   ORANGE_LIGHTS,
   PURPLE_LIGHTS,
   RED_LIGHTS,
+  LIGHTS_OFF,
 };
 
 /* Keymap
@@ -123,7 +124,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [LAYER_NUM_PAD] = LAYOUT_ergodox(
     // Left hand
-    TEAL_LIGHTS    , BLUE_LIGHTS    , GREEN_LIGHTS   , ORANGE_LIGHTS  , PURPLE_LIGHTS  , RED_LIGHTS     , _______        ,
+    TEAL_LIGHTS    , BLUE_LIGHTS    , GREEN_LIGHTS   , ORANGE_LIGHTS  , PURPLE_LIGHTS  , RED_LIGHTS     , LIGHTS_OFF     ,
     _______        , RGB_MOD        , RGB_SLD        , RGB_VAD        , RGB_VAI        , _______        , _______        ,
     _______        , RGB_TOG        , RGB_HUD        , RGB_HUI        , _______        , _______        ,
     _______        , _______        , _______        , _______        , _______        , _______        , _______        ,
@@ -240,6 +241,15 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
           rgblight_enable();
           rgblight_mode(1);
           rgblight_sethsv(0,255,255);
+        #endif
+      }
+      return false;
+    case LIGHTS_OFF:
+      if (record->event.pressed) {
+        #ifdef RGBLIGHT_ENABLE
+          rgblight_disable();
+          /* rgblight_mode(1); */
+          /* rgblight_sethsv(130,237,128); */
         #endif
       }
       return false;
